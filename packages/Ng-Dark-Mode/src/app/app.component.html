@@ -1,0 +1,24 @@
+<div>
+  <input
+    type="checkbox"
+    id="darkModeToggle"
+    (change)="toggleDarkMode()"
+    [checked]="isDarkMode"
+  />
+  <label for="darkModeToggle">Dark Mode</label>
+</div>
+
+<img
+  src="assets/sun.png"
+  *ngIf="!isDarkMode"
+  class="toggle-icon"
+  (click)="toggleDarkMode()"
+  alt="image"
+/>
+<img
+  src="assets/moon.png"
+  *ngIf="isDarkMode"
+  class="toggle-icon"
+  (click)="toggleDarkMode()"
+  alt="image"
+/>
